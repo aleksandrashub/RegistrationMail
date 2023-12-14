@@ -1,0 +1,626 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="EmailRegistr.MainWindow"
+        Title="EmailReg">
+<ScrollViewer>
+    <Grid
+        ShowGridLines="False"
+        RowDefinitions="40, 60, 70, 800, 30"
+        ColumnDefinitions="*, *">
+        <StackPanel
+            Grid.Column="0"
+            Grid.Row="0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Orientation="Horizontal">
+            <Button
+                Background="White"
+                Margin="5, 0, 0, 0"
+                Height="30"
+                FontSize="12"
+                Content="Mail.ru">
+            </Button>
+            <Button
+                Background="White"
+                Height="30"
+                FontSize="12"
+                Content="Почта">
+            </Button>
+            <Button
+                Background="White"
+                Height="30"
+                FontSize="12"
+                Content="Облако">
+            </Button>
+            <Button
+                Background="White"
+                Height="30"
+                FontSize="12"
+                Content="Одноклассники">
+            </Button>
+            <Button
+                Background="White"
+                Height="30"
+                FontSize="12"
+                Content="Вконтакте">
+            </Button>
+            <Button
+                Background="White"
+                Height="30"
+                FontSize="12"
+                Content="Новости">
+            </Button>
+            <Button
+                Background="White"
+                Height="30"
+                FontSize="12"
+                Content="Знакомства">
+            </Button>
+            <Button
+                Background="White"
+                Height="30"
+                FontSize="12"
+                Content="Игры">
+            </Button>
+            <Button
+                Background="White"
+                Height="30"
+                FontSize="12"
+                Content="Все проекты">
+            </Button>
+        </StackPanel>
+        <StackPanel
+            Grid.Row="0"
+            Grid.Column="1"
+            HorizontalAlignment="Right"
+            Orientation="Horizontal">
+            <Button
+                Background="#0052FE"
+                Content="Войти"
+                FontSize="12"
+                VerticalAlignment="Center">
+            </Button>
+            <Button
+                Background="White"
+                Content="Регистрация"
+                FontSize="12"
+                Foreground="#0052FE">
+            </Button>
+        </StackPanel>
+        <StackPanel
+            Background="#0052FE"
+            Grid.Row="1"
+            Grid.Column="0">
+            <Image
+                Margin="70, 0, 0 , 0"
+                HorizontalAlignment="Left"
+                Source="/Assets/mail.jpg"
+                Width="120"
+                Height="60">
+            </Image>
+        </StackPanel>
+        <StackPanel
+            Background="#0052FE"
+            Grid.Row="1"
+            Grid.Column="1">
+        </StackPanel>
+        <StackPanel
+            Background="White"
+            Grid.Row="2"
+            Grid.Column="1"
+            Orientation="Horizontal"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center">
+            <Button
+                Height="30"
+                Foreground="#0052FE"
+                Background="#e5effe"
+                VerticalContentAlignment="Center"
+                HorizontalContentAlignment="Center"
+                FontSize="14"
+                Content="Обычная почта"
+                Width="200">
+
+            </Button>
+            <Button
+                Height="30"
+                Foreground="Black"
+                Background="White"
+                VerticalContentAlignment="Center"
+                HorizontalContentAlignment="Center"
+                FontSize="14"
+                Content="Детская почта"
+                Width="200">
+
+            </Button>
+        </StackPanel>
+        <Border
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            CornerRadius="10"
+            BorderThickness="0.6"
+            BorderBrush="DarkGray"
+            Grid.Row="3"
+            Grid.Column="1"
+            Width="400"
+            Height="600">
+            <StackPanel
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Width="350"
+                Height="550"
+                Orientation="Vertical">
+                <TextBlock
+                    VerticalAlignment="Top"
+                    FontSize="20"
+                    TextAlignment="Left">
+                    Создание почтового ящика
+                </TextBlock>
+                <StackPanel
+                    Orientation="Horizontal">
+                    <StackPanel
+                        Orientation="Vertical">
+                        <TextBlock
+                            FontSize="12"
+                            Foreground="Gray"
+                            Margin="0, 10, 0, 0"
+                            TextAlignment="Left">
+                            Имя
+                        </TextBlock>
+                        <TextBox
+                            BorderThickness="0.6"
+                            BorderBrush="DarkGray"
+                            HorizontalAlignment="Left"
+                            Margin="0, 5, 0, 0"
+                            Width="172"
+                            Height="35"
+                            VerticalContentAlignment="Center">
+                        </TextBox>
+                    </StackPanel>
+                    <StackPanel
+                        Orientation="Vertical"
+                        HorizontalAlignment="Right">
+                        <TextBlock
+                            FontSize="12"
+                            Foreground="Gray"
+                            Margin="0, 10, 0, 0"
+                            TextAlignment="Left">
+                            Фамилия
+                        </TextBlock>
+                        <TextBox
+                            BorderThickness="0.6"
+                            BorderBrush="DarkGray"
+                            HorizontalAlignment="Left"
+                            Margin="6, 5, 0, 0"
+                            Width="172"
+                            Height="35"
+                            VerticalContentAlignment="Center">
+                        </TextBox>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel
+                    Margin="2, 10, 0, 0">
+                    <TextBlock
+                        FontSize="12"
+                        Foreground="Gray">
+                        Дата рождения
+                    </TextBlock>
+                    <StackPanel
+                        Margin="2, 5, 0, 0 "
+                        Orientation="Horizontal">
+                        <ComboBox
+                            BorderBrush="DarkGray"
+                            Height="35"
+                            VerticalContentAlignment="Center"
+                            Width="80"
+                            PlaceholderForeground="Gray"
+                            PlaceholderText="День"
+                            MaxDropDownHeight="400">
+                            <ComboBoxItem>1</ComboBoxItem>
+                            <ComboBoxItem>2</ComboBoxItem>
+                            <ComboBoxItem>3</ComboBoxItem>
+                            <ComboBoxItem>4</ComboBoxItem>
+                            <ComboBoxItem>5</ComboBoxItem>
+                            <ComboBoxItem>6</ComboBoxItem>
+                            <ComboBoxItem>7</ComboBoxItem>
+                            <ComboBoxItem>8</ComboBoxItem>
+                            <ComboBoxItem>9</ComboBoxItem>
+                            <ComboBoxItem>10</ComboBoxItem>
+                            <ComboBoxItem>11</ComboBoxItem>
+                            <ComboBoxItem>12</ComboBoxItem>
+                            <ComboBoxItem>13</ComboBoxItem>
+                            <ComboBoxItem>14</ComboBoxItem>
+                            <ComboBoxItem>15</ComboBoxItem>
+                            <ComboBoxItem>16</ComboBoxItem>
+                            <ComboBoxItem>17</ComboBoxItem>
+                            <ComboBoxItem>18</ComboBoxItem>
+                            <ComboBoxItem>19</ComboBoxItem>
+                            <ComboBoxItem>20</ComboBoxItem>
+                            <ComboBoxItem>21</ComboBoxItem>
+                            <ComboBoxItem>22</ComboBoxItem>
+                            <ComboBoxItem>23</ComboBoxItem>
+                            <ComboBoxItem>24</ComboBoxItem>
+                            <ComboBoxItem>25</ComboBoxItem>
+                            <ComboBoxItem>26</ComboBoxItem>
+                            <ComboBoxItem>27</ComboBoxItem>
+                            <ComboBoxItem>28</ComboBoxItem>
+                            <ComboBoxItem>29</ComboBoxItem>
+                            <ComboBoxItem>30</ComboBoxItem>
+                            <ComboBoxItem>31</ComboBoxItem>
+                        </ComboBox>
+                        <ComboBox
+                            BorderBrush="DarkGray"
+                            Height="35"
+                            PlaceholderForeground="Gray"
+                            VerticalContentAlignment="Center"
+                            PlaceholderText="Месяц"
+                            Width="190"
+                            MaxDropDownHeight="400">
+                            <ComboBoxItem>Январь</ComboBoxItem>
+                            <ComboBoxItem>Февраль</ComboBoxItem>
+                            <ComboBoxItem>Март</ComboBoxItem>
+                            <ComboBoxItem>Апрель</ComboBoxItem>
+                            <ComboBoxItem>Май</ComboBoxItem>
+                            <ComboBoxItem>Июнь</ComboBoxItem>
+                            <ComboBoxItem>Июль</ComboBoxItem>
+                            <ComboBoxItem>Август</ComboBoxItem>
+                            <ComboBoxItem>Сентябрь</ComboBoxItem>
+                            <ComboBoxItem>Октябрь</ComboBoxItem>
+                            <ComboBoxItem>Ноябрь</ComboBoxItem>
+                            <ComboBoxItem>Декабрь</ComboBoxItem>
+                        </ComboBox>
+                        <ComboBox
+                            BorderBrush="DarkGray"
+                            Height="35"
+                            PlaceholderForeground="Gray"
+                            VerticalContentAlignment="Center"
+                            PlaceholderText="Год"
+                            Width="76"
+                            MaxDropDownHeight="400">
+                            <ComboBoxItem>2023</ComboBoxItem>
+                            <ComboBoxItem>2022</ComboBoxItem>
+                            <ComboBoxItem>2021</ComboBoxItem>
+                            <ComboBoxItem>2020</ComboBoxItem>
+                            <ComboBoxItem>2019</ComboBoxItem>
+                            <ComboBoxItem>2018</ComboBoxItem>
+                            <ComboBoxItem>2017</ComboBoxItem>
+                            <ComboBoxItem>2016</ComboBoxItem>
+                            <ComboBoxItem>2015</ComboBoxItem>
+                            <ComboBoxItem>2014</ComboBoxItem>
+                            <ComboBoxItem>2013</ComboBoxItem>
+                            <ComboBoxItem>2012</ComboBoxItem>
+                            <ComboBoxItem>2011</ComboBoxItem>
+                            <ComboBoxItem>2010</ComboBoxItem>
+                            <ComboBoxItem>2009</ComboBoxItem>
+                            <ComboBoxItem>2008</ComboBoxItem>
+                            <ComboBoxItem>2007</ComboBoxItem>
+                            <ComboBoxItem>2006</ComboBoxItem>
+                            <ComboBoxItem>2005</ComboBoxItem>
+                            <ComboBoxItem>2004</ComboBoxItem>
+                        </ComboBox>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel
+                    Orientation="Vertical">
+                    <TextBlock
+                        FontSize="12"
+                        Foreground="Gray"
+                        Margin="0, 10, 0, 0"
+                        TextAlignment="Left">
+                        Пол
+                    </TextBlock>
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <RadioButton
+                            Content="Мужской">
+                        </RadioButton>
+
+                        <RadioButton
+                            Margin="5, 0, 0, 0"
+
+                            Content="Женский">
+                        </RadioButton>
+
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel
+                    Orientation="Horizontal"
+                    Margin="0, 10, 0, 0">
+                    <TextBlock
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Left"
+                        FontSize="12"
+                        Foreground="Gray">
+                        Имя ящика
+                    </TextBlock>
+                    <Button
+                        Margin="120, 0, 0, 0"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Right"
+                        FontSize="12"
+                        Foreground="#0052FE"
+                        Background="White"
+                        Content="Перенести почту из Gmail">
+                    </Button>
+                </StackPanel>
+                <StackPanel
+
+                    Orientation="Horizontal">
+                    <TextBox
+                        HorizontalAlignment="Left"
+                        BorderBrush="DarkGray"
+                        Height="35"
+                        VerticalContentAlignment="Center"
+                        Width="240">
+                    </TextBox>
+                    <ComboBox
+                        Height="35"
+                        VerticalContentAlignment="Center"
+                        SelectedIndex="0"
+                        BorderBrush="DarkGray"
+                        Width="110"
+                        MaxDropDownHeight="400">
+                        <ComboBoxItem>@mail.ru</ComboBoxItem>
+                        <ComboBoxItem>@internet.ru</ComboBoxItem>
+                        <ComboBoxItem>@bk.ru</ComboBoxItem>
+                        <ComboBoxItem>@inbox.ru</ComboBoxItem>
+                        <ComboBoxItem>@list.ru</ComboBoxItem>
+                    </ComboBox>
+                </StackPanel>
+                <StackPanel
+                    Width="350"
+                    Margin="0, 10, 0, 0"
+                    Orientation="Vertical">
+                    <StackPanel
+                        Orientation="Horizontal">
+                        <TextBlock
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Left"
+                            FontSize="12"
+                            Foreground="Gray">
+                            Пароль
+                        </TextBlock>
+                        <Button
+                            VerticalAlignment="Center"
+                            Margin="94, 0, 0, 0"
+                            Background="White"
+                            FontSize="12"
+                            Foreground="#0052FE"
+                            Content="Сгенерировать надежный пароль">
+                        </Button>
+                    </StackPanel>
+                    <TextBox
+                        BorderBrush="DarkGray"
+                        Width="350"
+                        Height="35"
+                        VerticalContentAlignment="Center">
+                    </TextBox>
+                    <StackPanel
+                        Margin="0, 10, 0, 0"
+                        Orientation="Horizontal">
+                        <TextBlock
+                            
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Left"
+                            FontSize="12"
+                            Foreground="Gray">
+                            Номер телефона
+                        </TextBlock>
+                        <Button
+                            VerticalAlignment="Center"
+                            Margin="90, 0, 0, 0"
+                            Background="White"
+                            FontSize="12"
+                            Foreground="#0052FE"
+                            Content="Указать резервную почту">
+                        </Button>
+                    </StackPanel>
+                    <StackPanel
+                        Width="350"
+                        Orientation="Horizontal">
+                        <ComboBox
+                            Margin="0, 0, 0, 0"
+                            SelectedIndex ="0"
+                            SelectedItem="{Binding pathImg}"
+                            BorderBrush="DarkGray"
+                            Width="80"
+                            Height="35"
+                            Name="countries">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <CheckBox
+                                        IsChecked="False">
+                                            <StackPanel
+                                        Orientation="Horizontal">
+                                       
+                                        <Image
+                                            Name="flag"
+                                            Width="35"
+                                            Height="18"
+                                            Source="{Binding pathImg}">
+                                        </Image>
+                                        <TextBlock
+                                            Margin="0, 0, 0, 0"
+                                            Name="namecountry"
+                                                Text="{Binding country}"
+                                                Width="60"
+                                                Height="15">
+                                        </TextBlock>
+                                      
+                                    </StackPanel>
+                                    </CheckBox>
+                                </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                            
+                        </ComboBox>
+                        <TextBox
+                            BorderBrush="DarkGray"
+                            Height="35"
+                            Width="270">
+                        </TextBox>
+                    </StackPanel>
+
+                </StackPanel>
+                <Button
+                    Margin="0, 20, 0,0"
+                    Background="#0052FE"
+                    Height="35"
+                    Width="350"
+                    Content="Создать"
+                    
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center">
+                </Button>
+                <TextBlock
+                    Foreground="Gray"
+                    FontSize="12"
+                    Width="350"
+                    TextWrapping="Wrap">
+                    Нажимая «Создать», вы принимаете следующие Условия использования
+                </TextBlock>
+            </StackPanel>
+        </Border>
+        <StackPanel
+            Margin="0, 0, 10, 0"
+            Grid.Column="0"
+            Grid.Row="3"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Right"
+            Orientation="Vertical">
+            <Border
+                Background="Gainsboro"
+                Width="320"
+                Height="120"
+                CornerRadius="10">
+                <StackPanel
+                    Orientation="Vertical"
+                    Height="90"
+                    Width="290">
+                    <TextBlock
+                        TextWrapping="Wrap">
+                        Чтобы не заполнять анкету, создайте почтовый ящик через:
+                    </TextBlock>
+                    <Button
+                        Margin="0, 10, 0, 0"
+                        Height="40"
+                        Background="#0052FE"
+                        Width="290">
+                        <StackPanel
+                            Orientation="Horizontal">
+                            <Image
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Left"
+                                Height="30"
+                                Width="30"
+                                Source="Assets/vk-logo.png">
+                            </Image>
+                            <TextBlock
+                                Foreground="White"
+                                VerticalAlignment="Center"
+                                Margin="90, 0,0, 0"
+                                TextAlignment="Center">
+                                VK ID
+                            </TextBlock>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+            </Border>
+            <Border
+                Margin="0, 15, 0, 0"
+                Background="Gainsboro"
+                Width="320"
+                Height="120"
+                CornerRadius="10">
+                <StackPanel
+                    Height="90"
+                    Width="300"
+                    Orientation="Horizontal">
+                    <StackPanel
+                        Orientation="Vertical"
+                        >
+                        <TextBlock
+                            Width="200"
+                            FontSize="14">
+                            Перенесите почту из Gmail
+                        </TextBlock>
+                        <TextBlock
+                            TextAlignment="Left"
+                            Width="200"
+                            Margin="0, 5, 0, 0"
+                            FontSize="12"
+                            TextWrapping="Wrap">
+                            Сохраните письма и привычный адрес в почте @xmail.ru
+                        </TextBlock>
+                        <Button
+                            Margin="0,15, 0, 0"
+                            Foreground="#0052FE"
+                            Background="Gainsboro">Перенести
+                        </Button>
+                    </StackPanel>
+                    <StackPanel
+                        Grid.Column="0"
+                        Grid.Row="3"
+                        HorizontalAlignment="Left">
+                    <Image
+                        VerticalAlignment="Top"
+                        Margin="10, 0, 0, 0"
+                        HorizontalAlignment="Center"
+                        Height="120"
+                        Width="100"
+                        Source="Assets/xmail.png">
+                    </Image>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+        <Border
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Grid.Row="5"
+            VerticalAlignment="Top"
+            Background="DarkGray"
+            Height="0.6"></Border>
+    <StackPanel 
+        Grid.Column="0"
+        Grid.Row="5"
+        Orientation="Horizontal"
+        VerticalAlignment="Center">
+        <Button
+            VerticalAlignment="Center"
+            Background="White"
+            Foreground="DarkGray"
+            Height="30"
+            FontSize="12">
+            Mail.ru
+        </Button>
+        <Button
+            VerticalAlignment="Center"
+            Background="White"
+            Foreground="DarkGray"
+            Height="30"
+            FontSize="12">
+            О компании
+        </Button>
+        <Button
+            VerticalAlignment="Center"
+            Background="White"
+            Foreground="DarkGray"
+            Height="30"
+            FontSize="12">
+            Реклама
+        </Button>
+        <Button
+            VerticalAlignment="Center"
+            Background="White"
+            Foreground="DarkGray"
+            Height="30"
+            FontSize="12">
+            Вакансии
+        </Button>
+        </StackPanel>
+    </Grid>
+    </ScrollViewer>
+</Window>

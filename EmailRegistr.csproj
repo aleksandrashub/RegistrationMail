@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+        <ApplicationManifest>app.manifest</ApplicationManifest>
+        <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectCapability Include="Avalonia" />
+        <TrimmerRootAssembly Include="Avalonia.Themes.Fluent" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Avalonia" Version="0.10.19" />
+        <PackageReference Include="Avalonia.Desktop" Version="0.10.19" />
+        <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+        <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="0.10.19" />
+        <PackageReference Include="XamlNameReferenceGenerator" Version="1.6.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Assets\Austria.png" />
+      <AvaloniaResource Include="Assets\Austria.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\vk-logo.png" />
+      <AvaloniaResource Include="Assets\vk-logo.png" />
+      <None Remove="Assets\xmail.png" />
+      <AvaloniaResource Include="Assets\xmail.png" />
+      <None Remove="Assets\mail.jpg" />
+      <AvaloniaResource Include="Assets\mail.jpg" />
+      <None Remove="Assets\Abkhazia.png" />
+      <AvaloniaResource Include="Assets\Abkhazia.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </AvaloniaResource>
+      <None Remove="Assets\flag_belarusi.png" />
+      <AvaloniaResource Include="Assets\flag_belarusi.png" />
+      <None Remove="Assets\italy.png" />
+      <AvaloniaResource Include="Assets\italy.png" />
+      <None Remove="Assets\rumynia.png" />
+      <AvaloniaResource Include="Assets\rumynia.png" />
+    </ItemGroup>
+</Project>
